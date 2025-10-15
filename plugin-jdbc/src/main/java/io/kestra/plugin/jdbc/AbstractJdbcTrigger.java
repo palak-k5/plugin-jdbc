@@ -40,6 +40,12 @@ public abstract class AbstractJdbcTrigger extends AbstractTrigger implements Pol
     private Property<String> timeZoneId;
 
     private Property<String> sql;
+    @PluginProperty
+    private Property<String> afterSQL; //aftersqltriggers
+    
+    public Property<String> getAfterSQL() {
+        return this.afterSQL;
+    }
 
     /**
      * @deprecated use fetchType: STORE instead
